@@ -1,5 +1,5 @@
 import * as echarts from '../../libs/ec-canvas/echarts'
-import pieOptions from '../../config/pieDefOption'
+import pieOptions from '../../config/PieDefOption'
 import { showToast } from '../../utils/UIUtil'
 import HomeModel from '../../models/home'
 import TimerState from '../../config/timerState'
