@@ -48,8 +48,6 @@
   line-height: 28rpx;
 }
 
-
-
 /* 空视图 */
 .pie-container {
   display: flex;
@@ -72,7 +70,6 @@
   height: 500rpx;
 }
 
-
 .newp > .prince{
   position: absolute;
   width:30%; 
@@ -93,12 +90,13 @@
   height: 24px;  
   position: absolute;
   left: 0;
-  top: 250px;
-  right: 100px;
+  top: 240px;
+  right: 120px;
   bottom: 0;
   margin: auto;
   text-align: center;
 }
+
 
 /* 创建按钮 */
 .create {
@@ -111,7 +109,6 @@
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  
   background-color:white;
   box-shadow: #4F3C75 0 3rpx 5rpx 5px;
 }

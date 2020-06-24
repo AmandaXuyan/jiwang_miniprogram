@@ -38,7 +38,6 @@
   align-self: flex-end;
 }
 
-
 .start-record {
   box-sizing: border-box;
   position: fixed;

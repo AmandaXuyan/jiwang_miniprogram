@@ -41,9 +41,14 @@ Page({
       .then(() => {
         this.getGoalList()
       })
+      this.setData({
+        timerState: stateDesc,
+        timerGoalTitle: timerInfo.goalTitle
+      })
 
-    this.setTimerTips()
+   
   },
+
 
   /**
    * 点击授权按钮获取信息
@@ -75,15 +80,10 @@ Page({
 
   onShareAppMessage() {
     return {
-      title: '我在用 Chronus 来记录目标进度'
+      title: '我在用 生活目标小管家 来记录目标进度'
     }
   },
-  //跳转到list界面
-  onJumpToList(){
-    wx.navigateTo({
-      url: '/pages/list/index'
-    })
-  },
+
   onCreateGoal() {
     if (!this.data.userInfo) {
       showToast('请先授权登录')
@@ -131,53 +131,11 @@ Page({
     )
   },
 
-  onGoalClick(e) {
-    const { goalId } = e.currentTarget.dataset
-
+  onJumpToList(){
     wx.navigateTo({
-      url: `/pages/detail/index?id=${goalId}`
+      url: '/pages/list/index'
     })
   },
-
-  onJumpToTimerPage() {
-    wx.navigateTo({
-      url: '/pages/timer/index'
-    })
-  },
-
-  setTimerTips() {
-    const timerInfo = globalEnv.data
-    let stateDesc = ''
-
-    switch (timerInfo.timerState) {
-      case TimerState.NONE:
-        stateDesc = ''
-        break
-      case TimerState.PAUSE:
-        stateDesc = '暂停中'
-        this.setData({
-          timer: formatDurationToTimer(timerInfo.duration),
-          timerGoalId: timerInfo.goalId
-        })
-        break
-      case TimerState.ONGOING:
-        stateDesc = '进行中'
-        this.setData({
-          timer: formatDurationToTimer(timerInfo.duration)
-        })
-        globalEnv.startTimer(null, null, duration => {
-          this.setData({
-            timer: formatDurationToTimer(duration),
-            timerGoalId: timerInfo.goalId
-          })
-        })
-    }
-    this.setData({
-      timerState: stateDesc,
-      timerGoalTitle: timerInfo.goalTitle
-    })
-  },
-
   initUserInfo() {
     HomeModel.getUserInfo().then(
       res => {
@@ -231,7 +189,6 @@ Page({
       )
     })
   },
-
   getGoalList() {
     HomeModel.getGoalList(globalEnv.data.userId).then(
       res => {
@@ -257,6 +214,8 @@ Page({
       }
     )
   },
+
+  
 
   updatePieOption() {
     const data = HomeModel.serializeForChart(this.data.goalList)

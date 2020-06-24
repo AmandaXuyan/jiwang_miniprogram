@@ -4,9 +4,7 @@
     "pages/detail/index",
     "pages/timer/index",
     "pages/summary/index",
-   "pages/list/index",
-    "models/list"
-    
+    "pages/list/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -16,4 +14,5 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
+  
 }

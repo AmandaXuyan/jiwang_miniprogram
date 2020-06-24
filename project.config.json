@@ -6,19 +6,10 @@
 		"es6": true,
 		"enhance": true,
 		"postcss": true,
-<<<<<<< Updated upstream
-=======
-		"preloadBackgroundData": false,
->>>>>>> Stashed changes
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
 		"autoAudits": false,
-<<<<<<< Updated upstream
-=======
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
->>>>>>> Stashed changes
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
@@ -26,26 +17,14 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-<<<<<<< Updated upstream
 		}
 	},
 	"appid": "wxaf716e5650ffdcc9",
-	"projectname": "Chronus",
+	"projectname": "jiwang_miniprogram",
 	"libVersion": "2.8.3",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-=======
-		},
-		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false
-	},
-	"appid": "wx4ff2fce51865a8cd",
-	"projectname": "min",
-	"libVersion": "2.8.3",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
->>>>>>> Stashed changes
 	"condition": {
 		"search": {
 			"current": -1,
@@ -62,13 +41,10 @@
 		"game": {
 			"list": []
 		},
-<<<<<<< Updated upstream
-=======
 		"gamePlugin": {
 			"current": -1,
 			"list": []
 		},
->>>>>>> Stashed changes
 		"miniprogram": {
 			"current": 2,
 			"list": [
@@ -92,22 +68,12 @@
 					"pathName": "pages/summary/index",
 					"query": "",
 					"scene": null
-<<<<<<< Updated upstream
-=======
 				},
 				{
 					"id": -1,
-					"name": "pages/home/index",
-					"pathName": "pages/home/index",
-					"query": "",
+					"name": "pages/list/index",
+					"pathName": "pages/list/index",
 					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/list/menu",
-					"pathName": "pages/list/menu",
-					"scene": null
->>>>>>> Stashed changes
 				}
 			]
 		}

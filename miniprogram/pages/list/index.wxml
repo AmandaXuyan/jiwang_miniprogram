@@ -1,4 +1,14 @@
 <view class="{{isCreating ? 'blur-bg' : ''}}">
+<!-- 当前记录提示 -->
+<view class="timer-tips" wx:if="{{timerState}}" bind:tap="onJumpToTimerPage">
+  <view class="timer-detail">
+    当前
+    <view class="timer-goal-title">{{timerGoalTitle}}</view>
+    {{timerState}}
+    <view class="check-timer">查看</view>
+  </view>
+  <view class="timer">{{timer}}</view>
+</view>
 
 <!-- 目标信息 -->
 <view class="project-container" wx:if="{{goalList.length}}">
@@ -20,7 +30,5 @@
 <view class="loading" wx:elif="{{!goalList}}">
   <m-loading />
 </view>
-
-
+<m-tips warn="Hi，你还没有创建目标呢" tips="返回前一页吧！" wx:else></m-tips>
 </view>
-

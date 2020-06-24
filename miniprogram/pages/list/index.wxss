@@ -4,6 +4,7 @@
   animation: ani-blur 1000ms;
 }
 
+
 /* 目标列表 */
 .project-container {
   margin: 0 40rpx;
@@ -20,7 +21,7 @@
 .project-container > .count > .num {
   display: inline-block;
   margin: 0 4rpx;
-  color:#FF9F23;
+  color: #FF9F23;
   font-weight: bolder;
   font-size: 32rpx;
 }
@@ -51,8 +52,69 @@
   margin-left: 0;
 }
 
+/* 当前记录提示 */
+.timer-tips {
+  margin: 0 40rpx;
+  background-color: #fdd835;
+  font-size: 28rpx;
+  border-radius: 18rpx;
+  padding: 20rpx 24rpx;
+  color: #555;
+  animation: tip-ani 2s infinite ease-in-out;
+  box-shadow: 0 6rpx 24rpx rgba(25, 118, 210, 0.08);
+}
 
+.timer-tips > .timer-detail {
+  display: flex;
+  align-items: center;
+}
 
+.timer-tips .timer {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #4F3C75;
+  margin-top: 6rpx;
+  letter-spacing: 2rpx;
+}
+
+.timer-tips > .timer-detail > .timer-goal-title {
+  display: inline-block;
+  font-weight: bold;
+  color: #000;
+  margin: 0 8rpx;
+}
+
+.timer-tips > .timer-detail > .check-timer {
+  margin-left: auto;
+  background-color: #fff;
+  color: #4F3C75;
+  padding: 5rpx 16rpx;
+  font-weight: bold;
+  border-radius: 24rpx;
+  font-size: 24rpx;
+  flex-shrink: 0;
+}
+
+@keyframes tip-ani {
+  0% {
+    background-color: #fdd835;
+  }
+  70% {
+    background-color: #fbc02d;
+  }
+  100% {
+    background-color: #fdd835;
+  }
+}
+
+@keyframes ani-blur {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 
 /* 加载 */
