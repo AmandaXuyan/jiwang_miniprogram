@@ -6,10 +6,10 @@ export default {
   },
   visualMap: {
     show: false,
-    min: 0,
-    max: 10,
+    min: 20,
+    max: 200,
     inRange: {
-      colorLightness: [0.9, 0.42]
+      colorLightness: [0.5,0.9]
     }
   },
   series: [
@@ -23,14 +23,14 @@ export default {
       label: {
         normal: {
           textStyle: {
-            color: 'rgba(0, 0, 0, 0.6)'
+            color: '#4F3C75'
           }
         }
       },
       labelLine: {
         normal: {
           lineStyle: {
-            color: 'rgba(0, 0, 0, 0.1)'
+            color: '#BFAAA1'
           },
           length: 10,
           length2: 10
@@ -38,7 +38,7 @@ export default {
       },
       itemStyle: {
         normal: {
-          color: '#039be5'
+          color: '#FF9F23'
         }
       },
 

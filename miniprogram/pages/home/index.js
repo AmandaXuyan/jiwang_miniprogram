@@ -20,7 +20,9 @@ Page({
     isUploading: false,
     timerGoalTitle: '',
     timer: '00:00:00',
-    timerState: null
+    timerState: null,
+    princeImg:'../../images/home/prince.png',
+    qipaoImg:'../../images/home/qipao.png',
   },
 
   onLoad() {
@@ -76,7 +78,12 @@ Page({
       title: '我在用 Chronus 来记录目标进度'
     }
   },
-
+  //跳转到list界面
+  onJumpToList(){
+    wx.navigateTo({
+      url: '/pages/list/index'
+    })
+  },
   onCreateGoal() {
     if (!this.data.userInfo) {
       showToast('请先授权登录')
