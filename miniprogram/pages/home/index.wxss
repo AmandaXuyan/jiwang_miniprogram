@@ -40,13 +40,15 @@
   box-sizing: border-box;
   padding: 12rpx 48rpx;
   border-radius: 36rpx;
-  background-color: #ffee58;
-  color: black;
+  background-color: #FF9F23;
+  color: white;
   text-align: center;
   font-weight: bold;
   font-size: 26rpx;
   line-height: 28rpx;
 }
+
+
 
 /* 空视图 */
 .pie-container {
@@ -59,6 +61,8 @@
 .empty-img {
   position: absolute;
   width: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* 饼状图 */

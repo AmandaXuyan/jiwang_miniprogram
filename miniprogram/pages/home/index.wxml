@@ -4,16 +4,16 @@
 <view class='user-info-container'>
   <image class='avatar' src='{{userInfo.avatarUrl}}' mode='aspectFit'></image>
   <view class='info'>
-    <view class='name' wx:if="{{userInfo}}">{{userInfo.nickName}}，</view>
+    <view class='name' wx:if="{{userInfo}}">{{userInfo.nickName}}</view>
     <button class="authorize" open-type="getUserInfo" bindgetuserinfo="onAuthorize" wx:else>
       授权登录
     </button>
    
   </view>
 </view>
-<!-- 饼状图 -->
+ <!-- 饼状图 -->
 <view class="pie-container">
-  <image class="empty-img" wx:if="{{goalList.length === 0 || !goalList}}" mode="aspectFit" src="../../images/home/empty.png" bind:tap="onCreateGoal" />
+  <image class="empty-img" wx:if="{{goalList.length === 0 || !goalList}}" mode="aspectFit" src="../../images/home/empty.jpg" bind:tap="onCreateGoal" />
   <view class="pie" hidden="{{isCreating}}">
     <ec-canvas ec="{{ pieOpt }}" id="chart"></ec-canvas>
   </view>
@@ -30,4 +30,4 @@
 
 </view>
 
-<m-modal title="新目标的名称是？" wx:if="{{isCreating}}" inputPlaceholder="例如：阅读《瓦尔登湖》" bind:cancel="onCancelCreate" bind:confirm="onAddGoal"/>
+<m-modal title="新目标的名称是？" wx:if="{{isCreating}}" inputPlaceholder="例如：小程序开发" bind:cancel="onCancelCreate" bind:confirm="onAddGoal"/>
