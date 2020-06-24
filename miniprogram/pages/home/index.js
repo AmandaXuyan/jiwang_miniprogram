@@ -2,8 +2,6 @@ import * as echarts from '../../libs/ec-canvas/echarts'
 import pieOptions from '../../config/PieDefOption'
 import { showToast } from '../../utils/UIUtil'
 import HomeModel from '../../models/home'
-import TimerState from '../../config/timerState'
-import { formatDurationToTimer } from '../../utils/dateTimeUtil'
 
 const globalEnv = getApp()
 let pie = null

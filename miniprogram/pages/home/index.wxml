@@ -33,4 +33,4 @@
 
 </view>
 
-<m-modal title="新目标的名称是？" wx:if="{{isCreating}}" inputPlaceholder="例如：小程序开发" bind:cancel="onCancelCreate" bind:confirm="onAddGoal"/>
+<m-modal title="创建一个目标吧" wx:if="{{isCreating}}" inputPlaceholder="例如：小程序开发" bind:cancel="onCancelCreate" bind:confirm="onAddGoal"/>

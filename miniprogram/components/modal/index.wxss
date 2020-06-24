@@ -44,7 +44,7 @@
 }
 
 .create-modal > .modal-title {
-  color: #333;
+  color: #4F3C75;
   font-weight: bold;
   font-size: 40rpx;
 }
@@ -52,7 +52,7 @@
 .create-modal > .new-goal-title {
   margin-top: 56rpx;
   padding: 8rpx;
-  border-bottom: 4rpx solid #1976d2;
+  border-bottom: 4rpx solid #4F3C75;
   font-size: 32rpx;
 }
 
@@ -73,6 +73,6 @@
   margin-left: 36rpx;
   padding: 8rpx 20rpx;
   border-radius: 12rpx;
-  background-color: #1565c0;
+  background-color: #4F3C75;
   color: white;
 }

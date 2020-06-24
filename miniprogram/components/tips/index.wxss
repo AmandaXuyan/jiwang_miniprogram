@@ -1,6 +1,6 @@
 .tips-container {
-  margin: 0 40rpx;
-  background-color: #fdd835;
+  margin: 20px 40rpx;
+  background-color: #FF9F23;
   font-size: 28rpx;
   border-radius: 18rpx;
   padding: 20rpx 24rpx;
@@ -32,12 +32,12 @@
 
 @keyframes ani {
   0% {
-    background-color: #fdd835;
+    background-color: #FF9F23;
   }
   70% {
-    background-color: #fbc02d;
+    background-color: #FF9F23;
   }
   100% {
-    background-color: #fdd835;
+    background-color: #FF9F23;
   }
 }

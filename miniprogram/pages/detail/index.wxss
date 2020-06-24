@@ -18,6 +18,7 @@
   line-height: 48rpx;
   min-height: 48rpx;
   vertical-align: text-top;
+  color:#4F3C75;
 }
 
 .header > .remove-goal {
