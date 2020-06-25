@@ -16,9 +16,7 @@ Page({
     timer: '00:00:00',
     timerState: null
   },
-  onLoad() {
-    this.initUserInfo()
-  },
+ 
 
   
   onShow() {

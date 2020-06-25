@@ -2,6 +2,7 @@ import * as echarts from '../../libs/ec-canvas/echarts'
 import pieOptions from '../../config/PieDefOption'
 import { showToast } from '../../utils/UIUtil'
 import HomeModel from '../../models/home'
+import TimerState from '../../config/timerState'
 
 const globalEnv = getApp()
 let pie = null
@@ -39,12 +40,7 @@ Page({
       .then(() => {
         this.getGoalList()
       })
-      this.setData({
-        timerState: stateDesc,
-        timerGoalTitle: timerInfo.goalTitle
-      })
-
-   
+    this.setTimerTips()
   },
 
 
@@ -211,6 +207,38 @@ Page({
         showToast('获取目标列表失败')
       }
     )
+  },
+  setTimerTips() {
+    const timerInfo = globalEnv.data
+    let stateDesc = ''
+
+    switch (timerInfo.timerState) {
+      case TimerState.NONE:
+        stateDesc = ''
+        break
+      case TimerState.PAUSE:
+        stateDesc = '暂停中'
+        this.setData({
+          timer: formatDurationToTimer(timerInfo.duration),
+          timerGoalId: timerInfo.goalId
+        })
+        break
+      case TimerState.ONGOING:
+        stateDesc = '进行中'
+        this.setData({
+          timer: formatDurationToTimer(timerInfo.duration)
+        })
+        globalEnv.startTimer(null, null, duration => {
+          this.setData({
+            timer: formatDurationToTimer(duration),
+            timerGoalId: timerInfo.goalId
+          })
+        })
+    }
+    this.setData({
+      timerState: stateDesc,
+      timerGoalTitle: timerInfo.goalTitle
+    })
   },
 
   
